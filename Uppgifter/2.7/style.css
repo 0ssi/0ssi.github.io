@@ -1,0 +1,28 @@
+.black{
+    background-color: black;
+color: white;
+width: 100%;
+}
+.gray{
+    background-color: gray;
+    color: white;
+    width: 50%;
+}
+.darkgray{
+    background-color: darkgrey;
+    color: white;
+    width: 25%;
+}
+.red{
+    background-color: red;
+    color: white;
+    width: 500px;
+}
+.blue{
+    background-color: blue;
+    color: white;
+    width: 250px;
+}
+div{
+    margin: 10px;
+}
