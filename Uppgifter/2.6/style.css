@@ -1,0 +1,15 @@
+h1{
+    background-color: black;
+    color: white;
+    margin: 0%;
+}
+p{
+    background-color: lightgrey;
+    margin: 0%;
+}
+h3{
+    background-color: darkgray;
+    color: white;
+    margin: 0%;
+    margin-top: 15px;
+}
