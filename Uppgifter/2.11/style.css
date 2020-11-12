@@ -1,0 +1,18 @@
+.box1{
+    background-color: black;
+    height: 33.33333vh;
+}
+.box2{
+    background-color: red;
+    color: red;
+    height: 33.33333vh;
+}
+.box3{
+    background-color: yellow;
+    color: yellow;
+    height: 33.3333vh;
+
+ }
+    body{
+        margin: 0;
+    }
