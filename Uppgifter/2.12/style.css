@@ -1,0 +1,24 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+.black{
+    background-color: black;
+    width: 33%;
+    height: 100%;
+}
+.yellow{
+    background-color: yellow;
+    width: 34%;
+    height: 100%;
+}
+.red{
+    background-color: red;
+    width: 33%;
+    height: 100%;
+}
+body{
+    margin: 0px;
+}
