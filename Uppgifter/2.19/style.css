@@ -1,0 +1,25 @@
+.img{
+    background-image: url("cow.jpg");
+    height: 500px;
+    width: 500px;
+    background-position: center;
+    background-size: 600px;
+    border: 60px white solid;
+    border-radius: 10000px;
+    color: white;
+   box-shadow: 5px 5px 20px grey;
+    
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #dddddd;
+
+}
+body{
+    margin: 0%;
+}
