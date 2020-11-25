@@ -81,6 +81,6 @@ h3{
 .--active:hover{
     box-shadow: white 0px 0px 10px 3px, inset white 0px 0px 10px 3px;
     transition: 3000ms;
-    border-radius: 100px;
+    border-radius: 300px;
     border: white 7px solid;
 }
