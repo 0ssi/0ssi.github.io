@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+nav{
+    background-color: #222222;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    animation: botom 5000ms;
+    box-shadow: #222222 0px 7px 30px;
+
+
+}
+body{
+    margin: 0%;
+}
+p{
+    margin: 0%;
+}
+h1{
+    color: white;
+    margin: 0%;
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding-top: 18px;
+
+}
+h3{
+    color: darkgray;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-top: 1px;
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.container{
+    margin-left: 25%;
+
+}
+@keyframes botom{
+    0%{
+        box-shadow: #222222 0 0 0;
+    }
+    100%{
+        box-shadow: #222222 0px 7px 30px;
+    }
+}
+.button{
+    text-decoration: none;
+    color: white;
+   font-family: sans-serif; 
+   padding: 0 27px;
+   height: 100%;
+   transition: 250ms;
+   box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.buttons{
+    margin-left: 20%;
+    height: 6rem;
+    display: flex;
+ 
+    
+}
+.buttons > *{
+    margin-left: 40px;
+}
+
+.--selected{
+    border-bottom: white 7px solid;
+
+}
+.button:hover{
+    box-shadow: 20px 20px 50px 10px white inset;
+}
+
+.--active:hover{
+    box-shadow: white 0px 0px 10px 3px, inset white 0px 0px 10px 3px;
+    transition: 3000ms;
+    border-radius: 100px;
+    border: white 7px solid;
+}
