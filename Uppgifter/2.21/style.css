@@ -7,7 +7,7 @@ nav{
     margin: 0%;
     display: flex;
     align-items: center;
-    animation: botom 5000ms;
+    animation: botom 3000ms;
     box-shadow: #222222 0px 7px 30px;
 
 
@@ -80,7 +80,7 @@ h3{
 
 .--active:hover{
     box-shadow: white 0px 0px 10px 3px, inset white 0px 0px 10px 3px;
-    transition: 3000ms;
+    transition: 2500ms;
     border-radius: 300px;
-    border: white 7px solid;
+    border: white 3px solid;
 }
