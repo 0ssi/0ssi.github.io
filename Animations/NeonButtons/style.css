@@ -9,8 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
-    background: #050801;
+    background: #000000;
 }
 a{
     position: relative;
@@ -29,14 +28,14 @@ a{
 
 }
 a:nth-child(1){
-    filter: hue-rotate(100deg);
+    filter: hue-rotate(150deg);
 }
 a:nth-child(3){
     filter: hue-rotate(290deg);
 }
 a:hover{
     background: #03e9f4;
-    color: #050801;
+    color: #000000;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
