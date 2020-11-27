@@ -20,7 +20,7 @@ body{
     position: absolute;
     display: block;
     border: 5px solid #fff;
-    box-shadow: 0 0 60px white, 0 1px 0 #ccc,
+    box-shadow: 0 0 40px white, 0 1px 0 #ccc,
     inset 0 5px #ccc;
                 
     box-sizing: border-box;
