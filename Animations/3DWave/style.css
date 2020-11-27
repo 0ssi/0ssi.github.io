@@ -31,12 +31,12 @@ body{
 {
     0%,100%
     {
-        transform: translateZ(-120px);
+        transform: translateZ(-100px);
 
     }
     50%
    {
-      transform: translateZ(120px); 
+      transform: translateZ(100px); 
 
    } 
 }
