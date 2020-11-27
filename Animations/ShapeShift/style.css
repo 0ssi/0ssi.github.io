@@ -20,13 +20,25 @@ body{
     position: absolute;
     display: block;
     border: 5px solid #fff;
-    box-shadow: 0 0 60px white, 0 1px 0 #ccc,
-    inset 0 5px #ccc;
-                
+    box-shadow: 0 0 40px white, 0 1px 0 #ccc,
+    inset 0 5px #ccc;         
     box-sizing: border-box;
     border-radius: 50%;
-    animation: animate 2s ease-in-out infinite;
+    animation: animate 5s ease-in-out infinite ;
 }
+
+.rotate{
+    animation: rotation 4s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
 @keyframes animate
 {
     0%,100%
