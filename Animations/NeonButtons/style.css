@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    
     background: #000000;
 }
 a{
@@ -28,7 +29,7 @@ a{
 
 }
 a:nth-child(1){
-    filter: hue-rotate(150deg);
+    filter: hue-rotate(100deg);
 }
 a:nth-child(3){
     filter: hue-rotate(290deg);
