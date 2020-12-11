@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color:#2c2f33;
 
 }
 .box{
@@ -31,9 +31,11 @@ body{
     display: block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, #f1f1f1, grey, #f1f1f1);
+    /*background: linear-gradient(0deg, #f1f1f1, grey, #f1f1f1);*/
+    background-image: url("https://media3.giphy.com/media/3o7526X6wryjzMTHnq/source.gif");
+    background-size: 100%;
     border-radius: 20px;
-    box-shadow:  1px 1px 50px;
+    /*box-shadow:  1px 1px 50px;*/
 }
 .box div span:nth-child(1){
     transform: rotateX(0deg); 
