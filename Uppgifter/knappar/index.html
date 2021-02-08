@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hej på ddig</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div>
+    <button id="text2">Färg1 </button>
+    <button id="text3">Färg2 </button>
+    <button id="text4">Färg3 </button>
+    <button id="text5">Färg4 </button>
+    <button id="text1">Färg5 </button>
+    
+    <button id="storlek1">storlek1 </button>
+    <button id="storlek2">storlek2 </button>
+    <button id="storlek3">storlek3 </button>
+    <button id="storlek4">storlek4 </button>
+    <button id="storlek5">storlek5 </button>
+
+    <button id="bakgrund1">Bakgrund1 </button>
+    <button id="bakgrund2">Bakgrund2 </button>
+    <button id="bakgrund3">Bakgrund3 </button>
+    <button id="bakgrund4">Bakgrund4 </button>
+    <button id="bakgrund5">Bakgrund5 </button>
+
+</div>
+    <h1>Hej På dig</h1>
+    <script>
+        let bodyElement = document.getElementById('body');
+        let redButtonElement = document.getElementById('bakgrund1');
+        let greenButtonElement = document.getElementById('bakgrund2');
+        let blueButtonElement = document.getElementById('bakgrund3');
+        let pinkButtonElement = document.getElementById('bakgrund4');
+        let purpleButtonElement = document.getElementById('bakgrund5');
+    
+        redButtonElement.addEventListener('click', changeBgToRed);
+        greenButtonElement.addEventListener('click', changeBgToGreen);
+        blueButtonElement.addEventListener('click', changeBgToBlue);
+        pinkButtonElement.addEventListener('click', changeBgToPink);
+        purpleButtonElement.addEventListener('click', changeBgToPurple);
+    
+        function changeBgToRed() {
+          bodyElement.style.background = 'red';
+        }
+        function changeBgToGreen() {
+          bodyElement.style.background = 'green';
+        }
+        function changeBgToBlue() {
+          bodyElement.style.background = 'blue';
+        }
+        function changeBgToPink() {
+          bodyElement.style.background = 'pink';
+        }
+        function changeBgToPurple() {
+          bodyElement.style.background = 'purple';
+        }
+      </script>
+
+    
+</body>
+</html>
