@@ -7,14 +7,14 @@ let mouse =  {
 
 
 let options = {
-    particleColor: "rgba(255, 255, 255)",
+    particleColor: "rgba(255, 0, 50)",
     lineColor: "rgba(255, 0, 50)",
-    particleAmount: 300,
+    particleAmount: 500,
     defaultRadius: 0.5,
     variantRadius: 2,
     defaultSpeed: 0.05,
     variantSpeed: 1,
-    linkRadius: 50
+    linkRadius: 65
 };
 
 let rgb = options.lineColor.match(/\d+/g);
@@ -38,6 +38,7 @@ document.addEventListener("mousemove",
         mouse.y = event.y;
     console.log(event.clientX, event.clientY);
 });
+
 
 function resizeReset() {
     w = canvas.width = window.innerWidth;
@@ -150,5 +151,6 @@ Particle = function() {
         ctx.closePath();
         ctx.fillStyle = _this.color;
         ctx.fill();
+
     }
 }
