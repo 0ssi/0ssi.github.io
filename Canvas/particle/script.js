@@ -8,11 +8,11 @@ let mouse =  {
 
 let options = {
     particleColor: "rgba(255, 255, 255)",
-    lineColor: "rgba(255, 0, 255)",
-    particleAmount: 200,
+    lineColor: "rgba(255, 0, 50)",
+    particleAmount: 300,
     defaultRadius: 0.5,
     variantRadius: 2,
-    defaultSpeed: 0.4,
+    defaultSpeed: 0.05,
     variantSpeed: 1,
     linkRadius: 50
 };
