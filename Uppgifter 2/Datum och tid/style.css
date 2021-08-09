@@ -1,0 +1,27 @@
+
+
+*{
+    margin: 0;
+    background: #1b2438;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    text-align: center;
+    font-size: 32pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(158, 49, 180);
+
+    padding: 20px;
+    text-shadow: 3px 3px 13px teal;
+    -webkit-box-reflect: below 0 linear-gradient(transparent,   white);
+}
+#datum{
+    padding: 10px;
+    
+}
