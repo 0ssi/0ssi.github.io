@@ -32,9 +32,6 @@ setInterval(() => {
     lblDate.innerText = date.d + "." + date.m + "." + date.y;
     console.log(date);
 
-    if(chkbtnSound.checked){
-        audio.play();
-    }
 }, 1000);
 
 function CheckZero() {
