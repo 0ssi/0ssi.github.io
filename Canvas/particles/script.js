@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let particleArray;
+let particleArrayd;
 
 let mouse = {
     x: null,
@@ -51,20 +51,20 @@ class Particle {
         let dy = mouse.y - this.y;
         let distance = Math.sqrt(dx*dx + dy*dy);
         if (distance < mouse.radius + this.size) {
-            if (mouse.x < this.x && this.x < canvas.width - this.size *5) {
-                this.x += 5;
+            if (mouse.x < this.x && this.x < canvas.width - this.size *10) {
+                this.x += 10;
             }
 
-            if (mouse.x > this.x && this.x > this.size * 5) {
-                this.x -= 5;
+            if (mouse.x > this.x && this.x > this.size * 10) {
+                this.x -= 10;
             }
 
-            if (mouse.y < this.y && this.y < canvas.height - this.size *5) {
-                this.y += 5;
+            if (mouse.y < this.y && this.y < canvas.height - this.size *10) {
+                this.y += 10;
             }
 
-            if (mouse.y > this.y && this.y > this.size * 5){
-                this.y -= 5;
+            if (mouse.y > this.y && this.y > this.size * 10){
+                this.y -= 10;
             }
         }
 
@@ -77,13 +77,13 @@ class Particle {
 
 function init() {
     particleArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 3000;
-    for (let i = 0; i < numberOfParticles; i++) {
+    let numberOfParticles = (canvas.height * canvas.width) / 9000;
+    for (let i = 0; i < numberOfParticles*3; i++) {
         let size = (Math.random() * 2) + 1;
         let x = (Math.random() * ((innerWidth - size *2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size *2) - (size * 2)) + size * 2);
-        let dx = (Math.random () * 2) - 1;
-        let dy = (Math.random () * 2) - 1;
+        let dx = (Math.random () * 5) - 2.5;
+        let dy = (Math.random () * 5) - 2.5;
         let color = "red";
         
         particleArray.push(new Particle(x, y, dx, dy, size, color));
@@ -109,7 +109,7 @@ function connect() {
             + ((particleArray [a].y - particleArray[b].y) *
             (particleArray[a].y - particleArray[b].y));
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                opacityValue = 0.8 - (distance / 15000);
+                opacityValue = 0.8 - (distance / 20000);
                 ctx.strokeStyle='rgba(255, 0, 50,' + opacityValue + ')';
                 ctx.lineWidth= 0.5;
                 ctx.beginPath();
