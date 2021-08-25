@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+
+}
+#canvas{
+    border: black 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
