@@ -7,6 +7,7 @@ canvas.height = 500;
 let score = 0;
 let gameFrame = 0;
 ctx.font ='50px Georgia';
+let gameSpeed = 1;
 
 
 // Mouse
@@ -66,7 +67,7 @@ class Player {
             ctx.stroke(); 
             
         }
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = 'transparent ';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -90,6 +91,9 @@ const player = new Player();
 
 // Bubbles
 const bubblesArray = [];
+const bubbleImage = new Image();
+bubbleImage.src = "bubble_pop_frame_01.png";
+
 class Bubble {
     constructor(){
         this.x = Math.random() * canvas.width;
@@ -107,12 +111,13 @@ class Bubble {
         this.distance = Math.sqrt(dx*dx + dy*dy);
     }
     draw(){
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'transparent';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.closePath();
         ctx.stroke();
+        ctx.drawImage(bubbleImage, this.x -75, this.y -75, this.radius * 3, this.radius * 3);
     }
 }
 
@@ -153,16 +158,94 @@ function handleBubbles(){
         }
     }
 }
+const background = new Image();
+background.src = "background1.png";
+
+const BG = {
+    x1: 0,
+    x2: canvas.width,
+    y: 0,
+    width: canvas.width,
+    height: canvas.height
+}
+
+function handleBackground() {
+    BG.x1 -= gameSpeed;
+    if (BG.x1 < -BG.width) BG.x1 = BG.width
+    BG.x2 -= gameSpeed;
+    if (BG.x2 < -BG.width) BG.x2 = BG.width
+    ctx.drawImage(background, BG.x1, BG.y, BG.width, BG.height);
+    ctx.drawImage(background, BG.x2, BG.y, BG.width, BG.height);
+}
+
+//Enemies
+const enemyImage = new Image();
+enemyImage.src = "__pink_cartoon_fish_01_swim.png";
+
+ class Enemy {
+     constructor(){
+        this.x = canvas.width + 200;
+        this.y = Math.random() * (canvas.height - 150) + 90;
+        this.radius = 60;
+        this.speed = Math.random() * 2 + 2;
+        this.frame = 0;
+        this.frameX = 0;
+        this.frameY = 0;
+        this.spriteWidth = 418;
+        this.spriteHeight = 397;
+     }
+     draw(){
+         ctx.fillStyle = "transparent";
+         ctx.beginPath();
+         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+         ctx.fill();
+         ctx.drawImage(enemyImage, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 60, this.y - 70, this.spriteWidth / 3.5, this.spriteHeight / 3.5);
+     }
+     update(){
+         this.x -= this.speed;
+         if (this.x < 0 - this.radius * 2){
+             this.x = canvas.width + 200;
+             this.y = Math.random() * (canvas.height - 150) + 90;
+             this.speed = Math.random() * 2 + 2;
+         }
+         if (gameFrame % 5 == 0) {
+             this.frame++;
+             if (this.frame >= 12) this.frame = 0;
+             if (this.frame == 3 || this.frame == 7 || this.frame || 11){
+                 this.frameX = 0;
+             } else {
+                 this.frameX++;
+             }
+         }
+     }
+ }
+ const enemy1 = new Enemy();
+ function handleEnemies(){
+     enemy1.update();
+     enemy1.draw();
+ }
+ //const enemy2 = new Enemy();
+ //function handleEnemies2(){
+    // enemy2.update();
+     //enemy2.draw();
+ //}
+
 
 // Animation loop
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    handleBackground()
     handleBubbles()
     player.update();
     player.draw();
+    handleEnemies();
     ctx.fillStyle = 'black';
     ctx.fillText('score: ' + score, 10, 50);
     gameFrame++;
     requestAnimationFrame(animate);
 }
 animate();
+
+window.addEventListener("resize", function() {
+    canvasPosition = canvas.getBoundingClientRect();
+});
